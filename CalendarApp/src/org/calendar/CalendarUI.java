@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import javax.swing.JLabel;
+import java.awt.Font;
 
 public class CalendarUI extends JFrame {
 
@@ -69,6 +70,16 @@ public class CalendarUI extends JFrame {
 		weekLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
 		contentPane.add(weekLabel);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel.setBounds(296, 11, 199, 31);
+		contentPane.add(lblNewLabel);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(962, 67, 127, 105);
+		contentPane.add(panel);
 
 		JLabel[] monthGroup = new JLabel[12];
 		String[] months = new String[] { "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov",
@@ -156,7 +167,6 @@ public class CalendarUI extends JFrame {
 			daySetter(i % 7, monthIndex + 1, label,year);
 		}
 	}
-
 }
 
 // 1 - Sun 4 - Sun 8
