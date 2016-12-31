@@ -1,4 +1,4 @@
-package org.objects;
+package org.calendar.objects;
 
 public class Calendar {
 	private int year;

@@ -119,7 +119,6 @@ public class CalendarUI extends JFrame {
 		int x = 117;
 		int y = 101;
 		JLabel[][] dayLabel = new JLabel[12][40];
-
 		for (int ii = 0; ii < 12; ii++) {
 			for (int jj = 0; jj < 40; jj++) {
 				dayLabel[ii][jj] = new JLabel();
@@ -140,11 +139,15 @@ public class CalendarUI extends JFrame {
 			y = 101;
 			x += 54;
 		}
-
-		Calendar calendar = new GregorianCalendar(2016, 0, 1);
+		
+		org.calendar.objects.Calendar calendarObj = new org.calendar.objects.Calendar();
+		int year = 2017;
+		lblNewLabel.setText(year + " Calendar");
+		
+		Calendar calendar = new GregorianCalendar(year, 0, 1);
 		int placeIndex = calendar.get(Calendar.DAY_OF_WEEK);
 		placeIndex = (placeIndex - 1) % 7;
-		daySetter(placeIndex, 0, dayLabel,2016);
+		daySetter(placeIndex, 0, dayLabel,year);
 	}
 	
 	public boolean isLeapYear(int year){
